@@ -12,14 +12,19 @@
 
 body {
     background-color: #3f3f4e;
-    width: 100vw;
+    width: 100%;
     margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 #landingScreen {
     margin: 0;
     display: flex;
     height: 85vh;
+    min-width: 50%;
+    float: left;
 }
 
 h1 {
@@ -29,17 +34,25 @@ h1 {
     font-weight: normal;
 }
 
-#landingScreen {
-    margin: 0;
+#aboutTabWindow {
+    min-width: 50%;
+    display: flex;
+    float:right;
+    height: 85vh;
 }
 
 #landingScreen h1 {
     color: white;
     text-align: left;
+    margin-top: 50%;
+    margin-bottom: 50%;
     font-size: 4em;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
     font-family: 'Courier Prime';
     font-weight: normal;
-    margin: 20vh 5vw 0 5vw;
+    margin: 0 auto 25vh 10vw;
 }
 
 #projectsOverview {
