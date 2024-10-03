@@ -128,8 +128,9 @@ h1 {
     height: 75%;
     background-color: #2c2c36;
     margin-right: 2vw;
+    padding: 0 3%;
     border-radius: 25px;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 #aboutInfoBox div p {
@@ -138,7 +139,7 @@ h1 {
     margin: 5%;
 }
 
-#skillInfoBox {
+#skillsInfoBox {
     display: block;
 }
 
@@ -150,6 +151,61 @@ h1 {
     display: none;
 }
 
+div.infoCard {
+    background-color: #626276;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 3vh;
+    width: 48%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    overflow: scroll;
+}
+
+.infoCard.left {
+    margin-right: 2%;
+    float: left;
+}
+
+.infoCard.right {
+    margin-left: 2%;
+    float: right;
+}
+
+.infoCard h3 {
+    color: white;
+    font-family: 'Courier Prime';
+    font-size: 150%;
+    margin: auto;
+    width: 70%;
+}
+
+.infoIcon {
+    height: 100%;
+    max-width: 28%;
+    background-color: white;
+    overflow: hidden;
+}
+
+.infoCard:hover {
+    animation-duration: 300ms;
+    animation-name: infoCardGlow;
+    animation-fill-mode: both;
+    cursor: pointer;
+}
+
+@keyframes infoCardGlow {
+    from {
+        filter: brightness(100%);
+    }
+
+    to {
+        filter: brightness(85%);
+    }
+}
+
 #title {
     width: 50%;
     display: flex;
@@ -159,12 +215,13 @@ h1 {
 
 #title h1 {
     text-align: center;
-    font-size: 4.5vw;
+    font-size: 400%;
     display:flex;
     flex-direction: column;
     justify-content: center;
     margin: auto;
     margin-top: 30vh;
+    margin-bottom: 0;
     font-family: 'Courier Prime';
     font-weight: normal;
     min-width: 100%;
@@ -172,13 +229,13 @@ h1 {
 
 #title h2 {
     text-align: center;
-    font-size: 3vw;
+    font-size: 250%;
     color: #83ff7e;
     display:flex;
     flex-direction: column;
     justify-content: center;
     margin: auto;
-    margin-top: -35vh;
+    margin-top: 0;
     font-family: 'Courier Prime';
     font-weight: normal;
 }
@@ -272,7 +329,7 @@ div.projectItem:hover {
     }
 
     to {
-        box-shadow: 0px 0px 0 5px #83ff7e;
+        box-shadow: 0 0 0 5px #83ff7e;
     }
 }
 
@@ -286,4 +343,28 @@ div.projectItem h2 {
 
 div.projectItem img {
     width: 100%;
+}
+
+#infoOverlays {
+    position: absolute;
+    margin: 1% auto;
+    align-self: center;
+    width: 60%;
+    height: 95%;
+    background-color: #2c2c36;
+    box-shadow: 0px 0px 10px 10px #2c2c36;
+    border: 5px solid #83ff7e;
+    border-radius: 25px;
+    display: none;
+}
+
+#closeInfoOverlay {
+    width: 5%;
+    float: right;
+    margin: 2%;
+    margin-right: 3%;
+}
+
+#closeInfoOverlay:hover {
+    cursor: pointer;
 }
