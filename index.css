@@ -130,7 +130,7 @@ h1 {
     margin-right: 2vw;
     padding: 0 3%;
     border-radius: 25px;
-    overflow: scroll;
+    padding-bottom: 3vh;
 }
 
 #aboutInfoBox div p {
@@ -153,7 +153,7 @@ h1 {
 
 div.infoCard {
     background-color: #626276;
-    border-radius: 5px;
+    border-radius: 15px;
     overflow: hidden;
     margin-top: 3vh;
     width: 48%;
@@ -161,7 +161,7 @@ div.infoCard {
     display: flex;
     flex-direction: row;
     text-align: center;
-    overflow: scroll;
+    overflow: hidden;
 }
 
 .infoCard.left {
@@ -177,9 +177,15 @@ div.infoCard {
 .infoCard h3 {
     color: white;
     font-family: 'Courier Prime';
-    font-size: 150%;
+    font-size: 200%;
+    line-height: 100%;
+    text-wrap:nowrap;
     margin: auto;
     width: 70%;
+}
+
+.specInfoOverlay {
+    display: none;
 }
 
 .infoIcon {
