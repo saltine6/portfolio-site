@@ -8,7 +8,7 @@ const skillsInfoBox = document.getElementById("skillsInfoBox");
 const experienceInfoBox = document.getElementById("experienceInfoBox");
 const aboutMeInfoBox = document.getElementById("aboutMeInfoBox");
 
-const infoOverlayContainer = document.getElementById("infoOverlays");
+const infoOverlayContainer = document.getElementById("dimScreen");
 const infoOverlayCloseButton = document.getElementById("closeInfoOverlay");
 
 const skillProgrammingCard = document.getElementById("programmingCard");
