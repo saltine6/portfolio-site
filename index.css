@@ -177,11 +177,17 @@ div.infoCard {
 .infoCard h3 {
     color: white;
     font-family: 'Courier Prime';
-    font-size: 200%;
+    font-size: 100%;
     line-height: 100%;
-    text-wrap:nowrap;
+    text-wrap:wrap;
     margin: auto;
     width: 70%;
+}
+
+@media screen and (min-width: 1300px) {
+    .infoCard h3 {
+        font-size: 200%;
+    }
 }
 
 .specInfoOverlay {
