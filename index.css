@@ -194,6 +194,11 @@ div.infoCard {
     display: none;
 }
 
+.specInfoOverlay h1 {
+    text-align: center;
+    width: 100%;
+}
+
 .infoIcon {
     height: 100%;
     max-width: 28%;
@@ -352,8 +357,10 @@ div.projectItem:hover {
 }
 
 div.projectItem h2 {
-    font-size: 3vw;
+    font-size: 200%;
     margin: 3% auto;
+    max-height: 100%;
+    text-align: center;
     color: white;
     font-family: 'Courier Prime';
     font-weight: normal;
@@ -392,14 +399,62 @@ div.projectItem img {
 }
 
 #closeInfoOverlay {
-    width: 5%;
-    float: right;
-    margin: 2%;
-    margin-right: 3%;
+    width: 3%;
+    margin: 2% 0 0 55%;
+    position: absolute;
+    color:#83ff7e;
 }
 
 #closeInfoOverlay:hover {
     cursor: pointer;
+    color:#51d34c;
+}
+
+.specInfoOverlay h1 {
+    font-size: 300%;
+    font-weight: bold;
+}
+
+.specInfoOverlay h2 {
+    color: #83ff7e;
+    font-family: 'Courier Prime';
+    margin-left: 5%;
+    font-size: 200%;
+    font-weight: normal;
+}
+
+.specInfoOverlay p {
+    color:white;
+    font-size: 150%;
+    font-family: 'Courier Prime';
+    font-weight: normal;
+    margin-left: 8%;
+    margin-right: 5%;
+    display: flex;
+}
+
+.threeColContainer {
+    width: 100%;
+    display: flex;
+    margin: 3% 4%;
+}
+
+.threeColContainer .leftContainer {
+    float: left;
+    width: 33%;
+    height: 100%;
+}
+
+.threeColContainer .rightContainer {
+    float: right;
+    width: 33%;
+    height: 100%;
+}
+
+.threeColContainer .midContainer {
+    width: 33%;
+    height: 100%;
+    margin: auto;
 }
 
 .stopScrolling {
