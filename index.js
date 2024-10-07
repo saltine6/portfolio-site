@@ -1,3 +1,5 @@
+const body = document.getElementById("body");
+
 const skillsTab = document.getElementById("skillsTab");
 const experienceTab = document.getElementById("experienceTab");
 const aboutMeTab = document.getElementById("aboutMeTab");
@@ -8,8 +10,9 @@ const skillsInfoBox = document.getElementById("skillsInfoBox");
 const experienceInfoBox = document.getElementById("experienceInfoBox");
 const aboutMeInfoBox = document.getElementById("aboutMeInfoBox");
 
-const infoOverlayContainer = document.getElementById("dimScreen");
+const infoOverlayContainer = document.getElementById("infoOverlay");
 const infoOverlayCloseButton = document.getElementById("closeInfoOverlay");
+const dimScreen = document.getElementById("dimScreen");
 
 const skillProgrammingCard = document.getElementById("programmingCard");
 const skillEditingCard = document.getElementById("editingCard");
@@ -31,6 +34,9 @@ const overlayAcademics = document.getElementById("AcademicsInfoOverlay");
 
 skillProgrammingCard.addEventListener('click', function() {
     infoOverlayContainer.style.display = "block";
+    body.classList.add("stopScrolling");
+
+    dimScreen.style.display = "block";
 
     overlayProgramming.style.display = "block";
     overlayEditing.style.display = "none";
@@ -40,10 +46,15 @@ skillProgrammingCard.addEventListener('click', function() {
     overlayLeadership.style.display = "none";
     overlayGameDevelopment.style.display = "none";
     overlayAcademics.style.display = "none";
+    dimScreen.scrollIntoView();
+
 })
 
 skillEditingCard.addEventListener('click', function() {
     infoOverlayContainer.style.display = "block";
+    body.classList.add("stopScrolling");
+
+    dimScreen.style.display = "block";
 
     infoOverlayContainer.style.display = "block";
     overlayProgramming.style.display = "none";
@@ -54,10 +65,15 @@ skillEditingCard.addEventListener('click', function() {
     overlayLeadership.style.display = "none";
     overlayGameDevelopment.style.display = "none";
     overlayAcademics.style.display = "none";
+    dimScreen.scrollIntoView();
+
 })
 
 skillVideographyCard.addEventListener('click', function() {
     infoOverlayContainer.style.display = "block";
+    body.classList.add("stopScrolling");
+
+    dimScreen.style.display = "block";
 
     infoOverlayContainer.style.display = "block";
     overlayProgramming.style.display = "none";
@@ -68,10 +84,15 @@ skillVideographyCard.addEventListener('click', function() {
     overlayLeadership.style.display = "none";
     overlayGameDevelopment.style.display = "none";
     overlayAcademics.style.display = "none";
+    dimScreen.scrollIntoView();
+
 })
 
 skillPhotographyCard.addEventListener('click', function() {
     infoOverlayContainer.style.display = "block";
+    body.classList.add("stopScrolling");
+
+    dimScreen.style.display = "block";
 
     infoOverlayContainer.style.display = "block";
     overlayProgramming.style.display = "none";
@@ -82,10 +103,15 @@ skillPhotographyCard.addEventListener('click', function() {
     overlayLeadership.style.display = "none";
     overlayGameDevelopment.style.display = "none";
     overlayAcademics.style.display = "none";
+    dimScreen.scrollIntoView();
+
 })
 
 skillWebDesignCard.addEventListener('click', function() {
     infoOverlayContainer.style.display = "block";
+    body.classList.add("stopScrolling");
+
+    dimScreen.style.display = "block";
 
     infoOverlayContainer.style.display = "block";
     overlayProgramming.style.display = "none";
@@ -96,10 +122,15 @@ skillWebDesignCard.addEventListener('click', function() {
     overlayLeadership.style.display = "none";
     overlayGameDevelopment.style.display = "none";
     overlayAcademics.style.display = "none";
+    dimScreen.scrollIntoView();
+
 })
 
 skillLeadershipCard.addEventListener('click', function() {
     infoOverlayContainer.style.display = "block";
+    body.classList.add("stopScrolling");
+
+    dimScreen.style.display = "block";
 
     infoOverlayContainer.style.display = "block";
     overlayProgramming.style.display = "none";
@@ -110,10 +141,15 @@ skillLeadershipCard.addEventListener('click', function() {
     overlayLeadership.style.display = "block";
     overlayGameDevelopment.style.display = "none";
     overlayAcademics.style.display = "none";
+    dimScreen.scrollIntoView();
+
 })
 
 skillGameDevelopmentCard.addEventListener('click', function() {
     infoOverlayContainer.style.display = "block";
+    body.classList.add("stopScrolling");
+
+    dimScreen.style.display = "block";
 
     infoOverlayContainer.style.display = "block";
     overlayProgramming.style.display = "none";
@@ -124,10 +160,15 @@ skillGameDevelopmentCard.addEventListener('click', function() {
     overlayLeadership.style.display = "none";
     overlayGameDevelopment.style.display = "block";
     overlayAcademics.style.display = "none";
+    dimScreen.scrollIntoView();
+
 })
 
 skillAcademicsCard.addEventListener('click', function() {
     infoOverlayContainer.style.display = "block";
+    body.classList.add("stopScrolling");
+
+    dimScreen.style.display = "block";
 
     infoOverlayContainer.style.display = "block";
     overlayProgramming.style.display = "none";
@@ -138,6 +179,7 @@ skillAcademicsCard.addEventListener('click', function() {
     overlayLeadership.style.display = "none";
     overlayGameDevelopment.style.display = "none";
     overlayAcademics.style.display = "block";
+    dimScreen.scrollIntoView();
 })
 
 skillsTab.addEventListener('click', function() {
@@ -172,4 +214,10 @@ aboutMeTab.addEventListener('click', function() {
 
 infoOverlayCloseButton.addEventListener('click', function() {
     infoOverlayContainer.style.display = "none";
+    body.classList.remove("stopScrolling");
 })
+
+dimScreen.addEventListener('click', function() {
+    infoOverlayContainer.style.display = "none";
+    body.classList.remove("stopScrolling");
+});
