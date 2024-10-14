@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Jackson's Portfolio</title>
+
+</head>
+
+<body id="body">
+	<div id="blogTitleDiv">
+		<h1 id="blogTitle"><b>Pi and Perseverance</b><br>My Self-Hosting Journey</h1>
+		<h3 id="blogAuthor">By Jackson Charron</h3>
+		<h5 id="blogDate">10-14-2024</h5>
+		<audio controls>
+			<source src="audio/SUPABlog.mp3" type="audio/mpeg">
+			Your browser does not support the audio player.
+		</audio>
+	</div>
+	<p>
+		In an age where more and more online services and goods are becoming subscription based - 
+		creative software, streaming services, even features in video games - I find myself longing 
+		for more control over my digital experience. Every time I watch a payment go through for an 
+		online subscription, whether it’s an Adobe Creative Cloud bill or a server hosting fee, I 
+		can’t help but wonder if there’s a better, more self-directed way to meet my needs than 
+		resigning myself to dependence on recurring monthly charges.
+	</p>
+	<p>
+		With my college application deadlines approaching at an alarming rate, I’ve decided that 
+		a portfolio website would help my admission chances with many of my top schools. Starting 
+		out on this project, however, I wasn’t eager to pay a monthly fee for website hosting, 
+		so I started doing some research on how I could get my site out on the net from home.
+	</p>
+	<p>
+		After a few enlightening - albeit painstaking and, at some points, downright 
+		contradictory - hours of research, I believed that I understood everything I needed 
+		to know about self-hosting a website. I would later come to realize my naïveté, but for 
+		the time being I set out to find my old Raspberry Pi amidst the clutter in my basement, 
+		marking the first step of my self-hosting journey.
+	</p>
+	<p>
+		Once I found my Raspberry Pi, a triumphant victory after multiple days of searching, I 
+		hooked the computer up to a monitor only to find that, although the Pi was booting, 
+		nothing was being displayed on the screen. Slightly annoyed yet filled with determination, 
+		I wasn’t going to let a small hiccup like this stop me. I carefully pulled out the 
+		OS-containing MicroSD card from the Pi’s plastic case, planning to flash it with a fresh 
+		copy of the Raspberry Pi OS. I would have gotten this over with quickly and been on my merry 
+		way, but it was at this point that I realized my MicroSD to USB adapter was missing, 
+		preventing me from plugging the MicroSD card into my desktop computer. Worn out from my 
+		rigorous search for the Raspberry Pi, I opted to order a new adapter on Amazon rather than 
+		upturn my entire house again looking for another small piece of hardware.
+	</p>
+	<p>
+		A few days passed and the adapter was finally in my hands. Without wasting any time I set 
+		up my Raspberry Pi with a shiny new OS and got my project back on track. Now that I could 
+		use the Pi, my first objective was to set up a remote connection with my desktop computer, 
+		which would enable me to easily tinker with the Raspberry Pi without needing to plug in any 
+		extra workspace-cluttering peripherals. Utilizing the new Raspberry Pi Connect beta, this 
+		was surprisingly straightforward, and having a step work so quickly and easily was a breath 
+		of fresh air.
+	</p>
+	<p>
+		Now that I had the computer working, I had to set up my web server. One of my requirements 
+		for this project is that everything hosted on the Pi needs to be compartmentalized, hopefully 
+		allowing me to expand its use for more projects in the future without affecting my website. 
+		Because of this requirement, my first move was to set up Docker. For those unfamiliar with 
+		Docker like I was at the beginning of this project, it allows you to create isolated 
+		‘containers’ on your computer. These containers allow an application to run within a single 
+		file that contains all of its dependencies packaged together. This compartmentalization not 
+		only makes running multiple projects simpler and prevents conflicts between them, it also 
+		adds a layer of security once the website is exposed to the internet.
+	</p>
+	<p>
+		Although setting up docker should have been relatively straightforward, a hidden requirement 
+		increased the difficulty tenfold. Because of the way I set up my project, everything I installed 
+		or configured had to be done through the linux command line which, while not incredibly complex, 
+		was alien to me and took some serious trial and error before I was comfortable with it. All 
+		things considered, this process could certainly have been more difficult, so I’m glad it went 
+		relatively smoothly. My difficulties with even the simplest of steps throughout this project 
+		served as a humbling reminder that no matter how much research I do, some things in life come 
+		down to leaving your comfort zone and learning on the fly.
+	</p>
+	<p>
+		Finally, in order to expose my website to the internet while minimizing personal risk, I set up 
+		my site to run through a Cloudflare tunnel before being served to clients. A Cloudflare tunnel 
+		acts as a middleman between my web server and the end user, allowing their device to request 
+		content from Cloudflare’s servers rather than directly from my own, protecting my personal 
+		information. While this one part of the project is not self-hosted, setting up my own security 
+		system would have required delving much deeper into this project than I intend to for now. For 
+		someone like me who doesn’t want to get into the nitty gritty of web security, tools like 
+		Cloudflare and Docker help to create a safer and much more manageable environment to work in.
+	</p>
+	<p>
+		Now that my website is set up, aside from a few strange bugs that I had to iron out over a couple 
+		of days, all that stands between me and a completed project is developing the actual web page. 
+		While I am making great strides towards reaching this goal, the site isn’t quite ready to be put 
+		on display for the world yet. However, this blog and its corresponding podcast version are currently 
+		being hosted on the site as a proof of concept!
+	</p>
+	<p>
+		As I write this, the site has been up reliably for multiple weeks, which inspires me with nothing but 
+		confidence for the future of this project. Hosting my own website has taught me that the control and 
+		independence that I long for online comes at the cost of persistence and a deep dedication to learning, 
+		two attitudes that I’ve found go a long way in any situation where I want to achieve excellent results.
+	</p>
+</body>
+<link rel="stylesheet" type="text/css" href="index.css">
+<script src="index.js"></script>
+</html>
