@@ -381,6 +381,7 @@ div.infoCard {
     flex-direction: column;
     background-color: #2c2c36;
     padding-top: 0.6vw;
+    padding-bottom: 1vw;
     text-align: center;
 }
 
