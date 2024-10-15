@@ -75,7 +75,8 @@ audio {
     position: fixed;
     bottom: 30%;
     right: 2%;
-    width:19%;
+    width:19vw;
+    height: 3vw;
 }
 
 #blogTitle {
@@ -108,7 +109,7 @@ audio {
 
 #blogDate {
     color: white; 
-    font-size: 150%;
+    font-size: 2vw;
     font-family: 'Courier Prime';
     font-weight: normal;
     width: 50%;
@@ -379,22 +380,23 @@ div.infoCard {
     display: flex;
     flex-direction: column;
     background-color: #2c2c36;
-    padding-top: 0.6%;
+    padding-top: 0.6vw;
+    text-align: center;
 }
 
-#footer p {
-    text-align: center;
-    display: flex;
-    margin: auto;
-    vertical-align: middle;
+#footer > p {
+    width: 50%;
+    display: block;
     font-family: 'Courier Prime';
     color: #ffffff;
-    font-size: 100%;
+    font-size: 1vw;
+    margin: auto;
+    text-align:center;
+    margin-bottom: 0;
 }
 
-#footer p a {
+#footer > p > a {
     color: #83ff7e;
-    margin-top: -20%;
 }
 
 #projects {
