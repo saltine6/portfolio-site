@@ -58,6 +58,15 @@ h1 {
     font-weight: normal;
 }
 
+h2 {
+    color: white; 
+    font-size: 0.6vw;
+    font-family: 'Courier Prime';
+    font-weight: normal;
+    text-align: center;
+    margin: 1vw 0;
+}
+
 p {
     color: white;
     font-family: 'Courier Prime';
@@ -396,7 +405,7 @@ div.infoCard {
     margin-bottom: 0;
 }
 
-#footer > p > a {
+a {
     color: #83ff7e;
 }
 
