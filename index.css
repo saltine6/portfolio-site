@@ -384,7 +384,7 @@ div.infoCard {
     flex-direction: column;
     background-color: #2c2c36;
     padding-top: 0.6vw;
-    padding-bottom: 1vw;
+    padding-bottom: 0.6vw;
     text-align: center;
 }
 
@@ -397,14 +397,23 @@ div.infoCard {
     margin: auto;
     text-align:center;
     margin-bottom: 0;
+    margin-top: 0;
 }
 
 a {
     color: #83ff7e;
+    width: 50%;
+    display: block;
+    font-family: 'Courier Prime';
+    font-size: 1vw;
+    margin: auto;
+    text-align:center;
+    margin-top: 1vw;
+    margin-bottom: 0;
 }
 
 #LeadershipInfoOverlay h2 {
-    font-size: 3vw;
+    font-size: 2vw;
 }
 
 #LeadershipInfoOverlay p {
