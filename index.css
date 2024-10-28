@@ -258,6 +258,44 @@ audio {
 
 #aboutMeInfoBox {
     display: none;
+    position: relative;
+    padding-top: 1vw;
+    padding-left: 1vw;
+}
+
+#aboutMeInfoBox > img {
+    width: 35%;
+    right: 0;
+    position: absolute;
+    margin-top: 1vw;
+    margin-right: 2vw;
+    box-shadow: 0.5vw 0.25vw 0.5vw;
+}
+
+#aboutMeInfoBox > h3 {
+    width: 55%;
+    font-family: 'Courier Prime';
+    font-weight: normal;
+    color: white;
+    font-size: 1.4vw;
+}
+
+#aboutMeInfoBox b {
+    font-weight: bold;
+    color:#83ff7e;
+}
+
+#aboutMeInfoBox .caption {
+    position: absolute;
+    right: 1vw;
+    font-size: 0.9vw;
+    font-weight: normal;
+    font-family: 'Courier Prime';
+    color:white;
+    bottom: 3vw;
+    text-align: center;
+    margin: 0;
+    width: 40%;
 }
 
 div.infoCard {
@@ -420,16 +458,51 @@ a {
     font-size: 1.5vw;
 }
 
+#VideographyInfoOverlay iframe {
+    display: block;
+    width: 50%;
+    height: 18vw;
+    border: none;
+    box-shadow: 0.5vw 0.25vw 0.5vw;
+    margin-left: 25%;
+    display: flex;
+}
+
+#EditingInfoOverlay {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#EditingInfoOverlay iframe {
+    display: block;
+    width: 40%;
+    height: 15vw;
+    border: none;
+    float: right;
+    box-shadow: 0.5vw 0.25vw 0.5vw;
+    margin-top: 2vw;
+}
+
+iframe.left {
+    margin: 0 8% 0 2%;
+}
+
+iframe.right {
+    margin: 0 2% 0 8%;
+}
+
 .photoDiv {
     width: 50%;
     padding: 0;
+    padding-bottom: 1vw;
 }
 
 .photoDiv > img {
     width: 75%;
     margin-left: 12.5%;
     margin-right: auto;
-    box-shadow: 10px 5px 10px;
+    box-shadow: 0.5vw 0.25vw 0.5vw;
 }
 
 .photoDiv > .tallImg {
@@ -442,6 +515,7 @@ a {
     margin: 0;
     margin-top: 1vw;
     text-align: center;
+    font-size: 1vw;
 }
 
 .floatRight {
@@ -531,7 +605,7 @@ a.projectItem img {
     width: 60%;
     height: 95%;
     background-color: #2c2c36;
-    box-shadow: 0px 0px 1vw 1vw #2c2c36;
+    box-shadow: 0 0 1vw 1vw #2c2c36;
     border: 0.3vw solid #83ff7e;
     border-radius: 1vw;
     overflow-y: auto;

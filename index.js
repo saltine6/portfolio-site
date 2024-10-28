@@ -32,6 +32,10 @@ const overlayLeadership = document.getElementById("LeadershipInfoOverlay");
 const overlayGameDevelopment = document.getElementById("GameDevelopmentInfoOverlay");
 const overlayAcademics = document.getElementById("AcademicsInfoOverlay");
 
+const videographyIFrame = document.getElementById("videographyIFrame");
+const editingIFrame = document.getElementById("editingIFrame");
+const editingIFrameTwo = document.getElementById("editingIFrameTwo");
+
 skillProgrammingCard.addEventListener('click', function() {
     infoOverlayContainer.style.display = "block";
     body.classList.add("stopScrolling");
@@ -53,6 +57,8 @@ skillProgrammingCard.addEventListener('click', function() {
 skillEditingCard.addEventListener('click', function() {
     infoOverlayContainer.style.display = "block";
     body.classList.add("stopScrolling");
+    editingIFrame.setAttribute('src', "https://www.youtube.com/embed/VPq_-zmwI3E?si=zysF98rRH07k9cE5&amp;start=299");
+    editingIFrameTwo.setAttribute('src', "https://www.youtube.com/embed/SsELrf45LDE?si=tnI4_F0GkTQwK8s4");
 
     dimScreen.style.display = "block";
 
@@ -72,6 +78,7 @@ skillEditingCard.addEventListener('click', function() {
 skillVideographyCard.addEventListener('click', function() {
     infoOverlayContainer.style.display = "block";
     body.classList.add("stopScrolling");
+    videographyIFrame.setAttribute('src', "https://www.youtube.com/embed/TQLhhXa9jVA?si=ZcMwzFsx3wbeJz1x");
 
     dimScreen.style.display = "block";
 
@@ -212,12 +219,20 @@ aboutMeTab.addEventListener('click', function() {
     aboutMeInfoBox.style.display = "block";
 });
 
+const allIFrames = document.getElementsByTagName("iframe");
+
 infoOverlayCloseButton.addEventListener('click', function() {
+    for (let i = 0; i < allIFrames.length; i++) {
+        allIFrames[i].setAttribute('src', 'none');
+    }
     infoOverlayContainer.style.display = "none";
     body.classList.remove("stopScrolling");
 })
 
 dimScreen.addEventListener('click', function() {
+    for (let i = 0; i < allIFrames.length; i++) {
+        allIFrames[i].setAttribute('src', 'none');
+    }
     infoOverlayContainer.style.display = "none";
     body.classList.remove("stopScrolling");
 });

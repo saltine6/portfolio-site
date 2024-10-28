@@ -13,37 +13,36 @@
 .newspaperTycoonBody {
     /*background-image: url('../images/academicsIcon.jpg');*/
     background-image: url("https://placehold.co/1920x1080");
-    background-size: contain;
+    background-size: cover;
 }
 
 .boatBody {
-    /*background-image: url('../images/academicsIcon.jpg');*/
-    background-image: url("https://placehold.co/1920x1080");
-    background-size: contain;
+    background-image: url("../images/boatBackground.jpg");
+    background-size: cover;
 }
 
 .itemGeneratorBody {
-    /*background-image: url('../images/academicsIcon.jpg');*/
-    background-image: url("https://placehold.co/1920x1080");
-    background-size: contain;
+    background-image: url('../images/itemGeneratorBackground.jpg');
+    background-size: cover;
 }
 
 .hitsBody {
-    /*background-image: url('../images/academicsIcon.jpg');*/
-    background-image: url("https://placehold.co/1920x1080");
-    background-size: contain;
+    background-image: url("../images/tallyHallMVBackground.jpg");
+    background-size: cover;
 }
 
 .pinholeBody {
-    /*background-image: url('../images/academicsIcon.jpg');*/
-    background-image: url("https://placehold.co/1920x1080");
+    background-image: url("../images/pinholeBackground.jpg");
     background-size: contain;
+    background-repeat: no-repeat;
+    background-color: black;
 }
 
 .antBody {
-    /*background-image: url('../images/academicsIcon.jpg');*/
-    background-image: url("https://placehold.co/1920x1080");
+    background-image: url("../images/antBackground.jpg");
     background-size: contain;
+    background-repeat: no-repeat;
+    background-color: white;
 }
 
 body {
