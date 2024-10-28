@@ -34,7 +34,6 @@ const overlayAcademics = document.getElementById("AcademicsInfoOverlay");
 
 const videographyIFrame = document.getElementById("videographyIFrame");
 const editingIFrame = document.getElementById("editingIFrame");
-const editingIFrameTwo = document.getElementById("editingIFrameTwo");
 
 skillProgrammingCard.addEventListener('click', function() {
     infoOverlayContainer.style.display = "block";
@@ -57,8 +56,7 @@ skillProgrammingCard.addEventListener('click', function() {
 skillEditingCard.addEventListener('click', function() {
     infoOverlayContainer.style.display = "block";
     body.classList.add("stopScrolling");
-    editingIFrame.setAttribute('src', "https://www.youtube.com/embed/VPq_-zmwI3E?si=zysF98rRH07k9cE5&amp;start=299");
-    editingIFrameTwo.setAttribute('src', "https://www.youtube.com/embed/SsELrf45LDE?si=tnI4_F0GkTQwK8s4");
+    editingIFrame.setAttribute('src', "https://www.youtube.com/embed/SsELrf45LDE?si=tnI4_F0GkTQwK8s4");
 
     dimScreen.style.display = "block";
 
