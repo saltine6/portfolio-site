@@ -10,23 +10,22 @@
     font-weight: bold;
 }
 
+body {
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 .newspaperTycoonBody {
     /*background-image: url('../images/academicsIcon.jpg');*/
-    background-image: url("https://placehold.co/1920x1080"), linear-gradient(#000000, #3f3f4e);
-    background-size: cover;
+    background-image: url("../images/newspaperBackground.jpg"), linear-gradient(#000000, #3f3f4e);
 }
 
 .boatBody {
     background-image: url("../images/boatBackground.jpg"), linear-gradient(#000000, #3f3f4e);
-    background-size: cover;
 }
 
 .itemGeneratorBody {
     background-image: url('../images/itemGeneratorBackground.jpg'), linear-gradient(#000000, #3f3f4e);
-    background-size: contain;
-    display: block;
-    background-repeat: no-repeat;
-    background-color: none;
 }
 
 .threeColImg {
@@ -40,6 +39,16 @@
     width: 30%;
     margin: 3vw 1.6%;
     float: left;
+}
+
+iframe {
+    width: 75%;
+    height: 45vh;
+    display: flex;
+    align-self: center;
+    margin: 3vh auto;
+    box-shadow: 0.5vw 0.25vw 0.5vw;
+    border: none;
 }
 
 p {
@@ -73,21 +82,14 @@ img {
 
 .hitsBody {
     background-image: url("../images/tallyHallMVBackground.jpg"), linear-gradient(#000000, #3f3f4e);
-    background-size: cover;
 }
 
 .pinholeBody {
     background-image: url("../images/pinholeBackground.jpg"), linear-gradient(#000000, #3f3f4e);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: black;
 }
 
 .antBody {
     background-image: url("../images/antBackground.jpg"), linear-gradient(#000000, #3f3f4e);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: white;
 }
 
 body {
