@@ -14,178 +14,33 @@ const infoOverlayContainer = document.getElementById("infoOverlay");
 const infoOverlayCloseButton = document.getElementById("closeInfoOverlay");
 const dimScreen = document.getElementById("dimScreen");
 
-const skillProgrammingCard = document.getElementById("programmingCard");
-const skillEditingCard = document.getElementById("editingCard");
-const skillVideographyCard = document.getElementById("videographyCard");
-const skillPhotographyCard = document.getElementById("photographyCard");
-const skillWebDesignCard = document.getElementById("webDesignCard");
-const skillLeadershipCard = document.getElementById("leadershipCard");
-const skillGameDevelopmentCard = document.getElementById("gameDevelopmentCard");
-const skillAcademicsCard = document.getElementById("academicsCard");
+const skillCards = document.getElementsByClassName("infoCard");
 
-const overlayProgramming = document.getElementById("ProgrammingInfoOverlay");
-const overlayEditing = document.getElementById("EditingInfoOverlay");
-const overlayVideography = document.getElementById("VideographyInfoOverlay");
-const overlayPhotography = document.getElementById("PhotographyInfoOverlay");
-const overlayWebDesign = document.getElementById("WebDesignInfoOverlay");
-const overlayLeadership = document.getElementById("LeadershipInfoOverlay");
-const overlayGameDevelopment = document.getElementById("GameDevelopmentInfoOverlay");
-const overlayAcademics = document.getElementById("AcademicsInfoOverlay");
+const infoOverlays = document.getElementsByClassName("specInfoOverlay");
 
-const videographyIFrame = document.getElementById("videographyIFrame");
-const editingIFrame = document.getElementById("editingIFrame");
+const iframeLinks = [,"https://www.youtube.com/embed/SsELrf45LDE?si=tnI4_F0GkTQwK8s4","https://www.youtube.com/embed/TQLhhXa9jVA?si=ZcMwzFsx3wbeJz1x",,,,,];
 
-skillProgrammingCard.addEventListener('click', function() {
-    infoOverlayContainer.style.display = "block";
-    body.classList.add("stopScrolling");
+// add click functionality to skill cards
+for (let i = 0; i < skillCards.length; i++) {
+    skillCards[i].addEventListener('click', function() {
+        infoOverlayContainer.style.display = "block";
+        body.classList.add("stopScrolling");
+        dimScreen.style.display = "block";
 
-    dimScreen.style.display = "block";
+        for (let j = 0; j < infoOverlays.length; j++) {
+            if (i == j) {
+                infoOverlays[j].style.display = "block";
+                if (iframeLinks[j] != null) {
+                    infoOverlays[j].getElementsByTagName("iframe")[0].setAttribute('src', iframeLinks[j]);
+                }
+            } else {
+                infoOverlays[j].style.display = "none";
+            }
+        }
 
-    overlayProgramming.style.display = "block";
-    overlayEditing.style.display = "none";
-    overlayVideography.style.display = "none";
-    overlayPhotography.style.display = "none";
-    overlayWebDesign.style.display = "none";
-    overlayLeadership.style.display = "none";
-    overlayGameDevelopment.style.display = "none";
-    overlayAcademics.style.display = "none";
-    dimScreen.scrollIntoView();
-
-})
-
-skillEditingCard.addEventListener('click', function() {
-    infoOverlayContainer.style.display = "block";
-    body.classList.add("stopScrolling");
-    editingIFrame.setAttribute('src', "https://www.youtube.com/embed/SsELrf45LDE?si=tnI4_F0GkTQwK8s4");
-
-    dimScreen.style.display = "block";
-
-    infoOverlayContainer.style.display = "block";
-    overlayProgramming.style.display = "none";
-    overlayEditing.style.display = "block";
-    overlayVideography.style.display = "none";
-    overlayPhotography.style.display = "none";
-    overlayWebDesign.style.display = "none";
-    overlayLeadership.style.display = "none";
-    overlayGameDevelopment.style.display = "none";
-    overlayAcademics.style.display = "none";
-    dimScreen.scrollIntoView();
-
-})
-
-skillVideographyCard.addEventListener('click', function() {
-    infoOverlayContainer.style.display = "block";
-    body.classList.add("stopScrolling");
-    videographyIFrame.setAttribute('src', "https://www.youtube.com/embed/TQLhhXa9jVA?si=ZcMwzFsx3wbeJz1x");
-
-    dimScreen.style.display = "block";
-
-    infoOverlayContainer.style.display = "block";
-    overlayProgramming.style.display = "none";
-    overlayEditing.style.display = "none";
-    overlayVideography.style.display = "block";
-    overlayPhotography.style.display = "none";
-    overlayWebDesign.style.display = "none";
-    overlayLeadership.style.display = "none";
-    overlayGameDevelopment.style.display = "none";
-    overlayAcademics.style.display = "none";
-    dimScreen.scrollIntoView();
-
-})
-
-skillPhotographyCard.addEventListener('click', function() {
-    infoOverlayContainer.style.display = "block";
-    body.classList.add("stopScrolling");
-
-    dimScreen.style.display = "block";
-
-    infoOverlayContainer.style.display = "block";
-    overlayProgramming.style.display = "none";
-    overlayEditing.style.display = "none";
-    overlayVideography.style.display = "none";
-    overlayPhotography.style.display = "block";
-    overlayWebDesign.style.display = "none";
-    overlayLeadership.style.display = "none";
-    overlayGameDevelopment.style.display = "none";
-    overlayAcademics.style.display = "none";
-    dimScreen.scrollIntoView();
-
-})
-
-skillWebDesignCard.addEventListener('click', function() {
-    infoOverlayContainer.style.display = "block";
-    body.classList.add("stopScrolling");
-
-    dimScreen.style.display = "block";
-
-    infoOverlayContainer.style.display = "block";
-    overlayProgramming.style.display = "none";
-    overlayEditing.style.display = "none";
-    overlayVideography.style.display = "none";
-    overlayPhotography.style.display = "none";
-    overlayWebDesign.style.display = "block";
-    overlayLeadership.style.display = "none";
-    overlayGameDevelopment.style.display = "none";
-    overlayAcademics.style.display = "none";
-    dimScreen.scrollIntoView();
-
-})
-
-skillLeadershipCard.addEventListener('click', function() {
-    infoOverlayContainer.style.display = "block";
-    body.classList.add("stopScrolling");
-
-    dimScreen.style.display = "block";
-
-    infoOverlayContainer.style.display = "block";
-    overlayProgramming.style.display = "none";
-    overlayEditing.style.display = "none";
-    overlayVideography.style.display = "none";
-    overlayPhotography.style.display = "none";
-    overlayWebDesign.style.display = "none";
-    overlayLeadership.style.display = "block";
-    overlayGameDevelopment.style.display = "none";
-    overlayAcademics.style.display = "none";
-    dimScreen.scrollIntoView();
-
-})
-
-skillGameDevelopmentCard.addEventListener('click', function() {
-    infoOverlayContainer.style.display = "block";
-    body.classList.add("stopScrolling");
-
-    dimScreen.style.display = "block";
-
-    infoOverlayContainer.style.display = "block";
-    overlayProgramming.style.display = "none";
-    overlayEditing.style.display = "none";
-    overlayVideography.style.display = "none";
-    overlayPhotography.style.display = "none";
-    overlayWebDesign.style.display = "none";
-    overlayLeadership.style.display = "none";
-    overlayGameDevelopment.style.display = "block";
-    overlayAcademics.style.display = "none";
-    dimScreen.scrollIntoView();
-
-})
-
-skillAcademicsCard.addEventListener('click', function() {
-    infoOverlayContainer.style.display = "block";
-    body.classList.add("stopScrolling");
-
-    dimScreen.style.display = "block";
-
-    infoOverlayContainer.style.display = "block";
-    overlayProgramming.style.display = "none";
-    overlayEditing.style.display = "none";
-    overlayVideography.style.display = "none";
-    overlayPhotography.style.display = "none";
-    overlayWebDesign.style.display = "none";
-    overlayLeadership.style.display = "none";
-    overlayGameDevelopment.style.display = "none";
-    overlayAcademics.style.display = "block";
-    dimScreen.scrollIntoView();
-})
+        dimScreen.scrollIntoView();
+    });
+}
 
 skillsTab.addEventListener('click', function() {
     skillsTab.classList.remove("unselectedTab");

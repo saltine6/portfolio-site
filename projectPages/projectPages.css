@@ -30,12 +30,20 @@ body {
 
 .threeColImg {
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     display: flex;
 }
 
-.threeColImg > img {
+.vertAlign {
+    align-items: center;
+    justify-content: center;
+}
+
+.threeColImg  img {
+    width: 100%;
+    margin: 0;
+}
+
+.threeColImg div, .threeColImg > img {
     width: 30%;
     margin: 3vw 1.6%;
     float: left;
@@ -58,6 +66,15 @@ p {
     font-family: 'Courier Prime';
     font-weight: normal;
     color: #ffffff;
+}
+
+.caption {
+    font-size: 1vw;
+    text-align: center;
+    width: 100%;
+    margin: 1vh 0;
+    float: right;
+    margin-bottom: -5vh;
 }
 
 b {
