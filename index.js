@@ -76,7 +76,7 @@ const allIFrames = document.getElementsByTagName("iframe");
 
 infoOverlayCloseButton.addEventListener('click', function() {
     for (let i = 0; i < allIFrames.length; i++) {
-        allIFrames[i].setAttribute('src', 'none');
+        allIFrames[i].setAttribute('src', '');
     }
     infoOverlayContainer.style.display = "none";
     body.classList.remove("stopScrolling");
@@ -84,7 +84,7 @@ infoOverlayCloseButton.addEventListener('click', function() {
 
 dimScreen.addEventListener('click', function() {
     for (let i = 0; i < allIFrames.length; i++) {
-        allIFrames[i].setAttribute('src', 'none');
+        allIFrames[i].setAttribute('src', '');
     }
     infoOverlayContainer.style.display = "none";
     body.classList.remove("stopScrolling");
