@@ -1,46 +1,91 @@
 @font-face {
     font-family: 'Courier Prime';
-    src: url("fonts/courier-prime/CourierPrime-Regular.ttf");
+    src: url("../fonts/courier-prime/CourierPrime-Regular.ttf");
     font-weight: normal;
 }
 
 @font-face {
     font-family: 'Courier Prime';
-    src: url("fonts/courier-prime/CourierPrime-Bold.ttf");
+    src: url("../fonts/courier-prime/CourierPrime-Bold.ttf");
     font-weight: bold;
 }
 
 .newspaperTycoonBody {
     /*background-image: url('../images/academicsIcon.jpg');*/
-    background-image: url("https://placehold.co/1920x1080");
+    background-image: url("https://placehold.co/1920x1080"), linear-gradient(#000000, #3f3f4e);
     background-size: cover;
 }
 
 .boatBody {
-    background-image: url("../images/boatBackground.jpg");
+    background-image: url("../images/boatBackground.jpg"), linear-gradient(#000000, #3f3f4e);
     background-size: cover;
 }
 
 .itemGeneratorBody {
-    background-image: url('../images/itemGeneratorBackground.jpg');
-    background-size: cover;
+    background-image: url('../images/itemGeneratorBackground.jpg'), linear-gradient(#000000, #3f3f4e);
+    background-size: contain;
+    display: block;
+    background-repeat: no-repeat;
+    background-color: none;
+}
+
+.threeColImg {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.threeColImg > img {
+    width: 30%;
+    margin: 3vw 1.6%;
+    float: left;
+}
+
+p {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.5vw;
+    font-family: 'Courier Prime';
+    font-weight: normal;
+    color: #ffffff;
+}
+
+b {
+    color:#83ff7e;
+}
+
+hr {
+    width: 90%;
+    margin-bottom: 5vh;;
+    border-color:#2c2c36;
+    border-width: 0.3vw;
+    border-style: solid;
+}
+
+img {
+    width: 75%;
+    display: flex;
+    align-self: center;
+    margin: 3vh auto;
+    box-shadow: 0.5vw 0.25vw 0.5vw;
 }
 
 .hitsBody {
-    background-image: url("../images/tallyHallMVBackground.jpg");
+    background-image: url("../images/tallyHallMVBackground.jpg"), linear-gradient(#000000, #3f3f4e);
     background-size: cover;
 }
 
 .pinholeBody {
-    background-image: url("../images/pinholeBackground.jpg");
-    background-size: contain;
+    background-image: url("../images/pinholeBackground.jpg"), linear-gradient(#000000, #3f3f4e);
+    background-size: cover;
     background-repeat: no-repeat;
     background-color: black;
 }
 
 .antBody {
-    background-image: url("../images/antBackground.jpg");
-    background-size: contain;
+    background-image: url("../images/antBackground.jpg"), linear-gradient(#000000, #3f3f4e);
+    background-size: cover;
     background-repeat: no-repeat;
     background-color: white;
 }
@@ -56,13 +101,13 @@ body {
     width: 50%;
     margin: 0;
     margin: 8vh 0 3vh 0;
-    height: 100vh;
     margin-left: 25%;
     display: flex;
     top: 0;
     box-sizing: border-box;
     border:#83ff7e solid 0.5vw;
     position: relative;
+    flex-direction: column;
 }
 
 h1 {
@@ -110,4 +155,33 @@ a {
     text-align:center;
     margin-top: 1vw;
     margin-bottom: 0;
+}
+
+a.returnLink {
+    margin-top: -1vw;
+    margin-bottom: 1vw;
+}
+
+a:hover {
+    filter: brightness(80%);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 0.75vw;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #2c2c36;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #83ff7e;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #51d34c;
 }

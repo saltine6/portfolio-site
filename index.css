@@ -728,3 +728,7 @@ a.projectItem img {
 ::-webkit-scrollbar-thumb:hover {
     background: #51d34c;
 }
+
+a:hover {
+    filter: brightness(80%);
+}
