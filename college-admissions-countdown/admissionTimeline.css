@@ -1,0 +1,128 @@
+h1 {
+    text-align: center;
+    font-size: 3vw;
+    margin: 0 auto;
+
+    font-family: "Oxygen";
+    font-weight: bolder;
+
+    color: rgb(51, 51, 51);
+}
+
+h2 {
+    text-align: center;
+    font-size: 4vw;
+    margin: 0 auto;
+
+    font-family: "Oxygen";
+    font-weight: bold;
+
+    color: black;
+}
+
+h4 {
+    font-size: 1.5vw;
+    line-height: 250%;
+    text-align: center;
+    vertical-align: middle;
+    height: 4vw;
+    margin: 0 auto;
+    margin-top: 5vw;
+
+    font-family: "Oxygen";
+    font-weight: bold;
+
+    color: white;
+    background-color: rgb(130, 16, 25);
+
+}
+
+body {
+    margin: 0;
+    background-image: url("images/siteBackground.jpg");
+    background-size: 50%;
+    background-attachment: fixed;
+    overflow-y: hidden;
+}
+
+#timersDiv {
+    overflow-y: scroll;
+    height: 85vh;
+    box-sizing: border-box;
+}
+
+#header {
+    background-color: rgb(130, 16, 25);
+    color: white;
+    padding: 2vw 0;
+    width: 100%;
+    height: 15vh;
+    margin: 0;
+
+    box-sizing: border-box;
+}
+
+#topCollegeDiv {
+    margin-bottom: 5vw;
+    margin-top: 5vw;
+
+    border-color: rgb(216, 176, 101);
+    box-shadow: 0.4vw 0.4vw rgb(255, 236, 209);
+}
+
+#topCollegeDiv h1 {
+    font-weight: 900;
+    font-size: 5vw;
+
+    color: rgb(130, 16, 25);
+}
+
+.collegeTimerDiv {
+    box-sizing: border-box;
+    width: 50%;
+    padding: 5vh 0;
+    margin: auto;
+    margin-bottom: 1vw;
+
+    border: 0.2vw solid rgb(147, 147, 147);
+    box-shadow: 0.4vw 0.4vw rgb(237, 237, 237);
+    border-radius: 1vw;
+    background-color: white;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 0.75vw;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgb(147, 147, 147);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(51, 51, 51);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(40, 40, 40);
+  }
+
+@font-face {
+    font-family: "Oxygen";
+    src: url("fonts/Oxygen/Oxygen-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Oxygen";
+    src: url("fonts/Oxygen/Oxygen-Bold.ttf") format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Oxygen";
+    src: url("fonts/Oxygen/Oxygen-Light.ttf") format('truetype');
+    font-weight: lighter;
+}
