@@ -90,6 +90,18 @@ body {
     background-color: white;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    filter: brightness(95%);
+}
+
+.accepted > h2 {
+    color: green;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 0.75vw;

@@ -46,11 +46,13 @@ function updateTimerLabels() {
     let currentTime = new Date();
     for (let i = 0; i < orderedDates.length; i++) {
         let daysLeft = Math.round(Math.abs((orderedDates[i] - currentTime) / dayLength));
-        let hoursLeft = Math.round(Math.abs(((orderedDates[i] - currentTime) - (daysLeft*dayLength))/hourLength));
-        let minutesLeft = Math.round(Math.abs(((orderedDates[i] - currentTime) - (daysLeft*dayLength) - (hoursLeft*hourLength))/minuteLength))
+        //let hoursLeft = Math.round(Math.abs(((orderedDates[i] - currentTime) - (daysLeft*dayLength))/hourLength));
+        //let minutesLeft = Math.round(Math.abs(((orderedDates[i] - currentTime) - (daysLeft*dayLength) - (hoursLeft*hourLength))/minuteLength))
 
         orderedTimers[i].innerHTML = daysLeft + " Days";
     }
+    buffaloTimer.parentElement.classList.add("accepted");
+    buffaloTimer.innerHTML = "ACCEPTED";
 }
 
 // update all of the labels when the site is opened
