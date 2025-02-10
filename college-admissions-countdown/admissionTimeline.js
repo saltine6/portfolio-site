@@ -3,20 +3,20 @@ const colgateDate = Date.parse('15 Dec 2024 00:00:00 EST');
 
 const polytechnicDate = Date.parse('15 Dec 2024 00:00:00 EST');
 const binghamtonDate = Date.parse('15 Jan 2025 00:00:00 EST');
-const ncstateDate = Date.parse('30 Jan 2025 00:00:00 EST');
-const stonybrookDate = Date.parse('31 Jan 2025 00:00:00 EST');
+const ncstateDate = Date.parse('30 Mar 2025 00:00:00 EST');
+const stonybrookDate = Date.parse('1 Apr 2025 00:00:00 EST');
 const rensselaerDate = Date.parse('1 Feb 2025 00:00:00 EST');
 
 const buffaloDate = Date.parse('1 Mar 2025 00:00:00 EST');
-const carnegieDate = Date.parse('1 Apr 2025 00:00:00 EST');
-const columbiaDate = Date.parse('1 Apr 2025 00:00:00 EST');
-const harvardDate = Date.parse('1 Apr 2025 00:00:00 EST');
-const cornellDate = Date.parse('1 Apr 2025 00:00:00 EST');
+const columbiaDate = Date.parse('15 Apr 2025 00:00:00 EST');
+
+const bucknellDate = Date.parse('1 Apr 2025 00:00:00 EST');
+const mitDate = Date.parse('1 Apr 2025 00:00:00 EST');
 
 const orderedDates =
 [
     colgateDate, polytechnicDate, binghamtonDate, ncstateDate, stonybrookDate,
-    buffaloDate, rensselaerDate, carnegieDate, columbiaDate, harvardDate, cornellDate
+    buffaloDate, rensselaerDate, columbiaDate, bucknellDate, mitDate
 ]
 
 // The headers that display the countdown
@@ -29,15 +29,14 @@ const stonybrookTimer = document.getElementById("stonybrookTimer");
 const buffaloTimer = document.getElementById("buffaloTimer");
 const rensselaerTimer = document.getElementById("rensselaerTimer");
 
-const carnegieTimer = document.getElementById("carnegieTimer");
 const columbiaTimer = document.getElementById("columbiaTimer");
-const harvardTimer = document.getElementById("harvardTimer");
-const cornellTimer = document.getElementById("cornellTimer");
+const mitTimer = document.getElementById("mitTimer");
+const bucknellTimer = document.getElementById("bucknellTimer");
 
 const orderedTimers =
 [
     colgateTimer, polytechnicTimer, binghamtonTimer, ncstateTimer, stonybrookTimer,
-    buffaloTimer, rensselaerTimer, carnegieTimer, columbiaTimer, harvardTimer, cornellTimer
+    buffaloTimer, rensselaerTimer, columbiaTimer, bucknellTimer, mitTimer
 ]
 
 const dayLength = 24 * 60 * 60 * 1000 // hours * minutes * seconds * milliseconds
@@ -55,6 +54,21 @@ function updateTimerLabels() {
     }
     buffaloTimer.parentElement.classList.add("accepted");
     buffaloTimer.innerHTML = "ACCEPTED";
+
+    polytechnicTimer.parentElement.classList.add("accepted");
+    polytechnicTimer.parentElement.style.top = "38%";
+    polytechnicTimer.innerHTML = "ACCEPTED";
+
+    binghamtonTimer.parentElement.classList.add("accepted");
+    binghamtonTimer.parentElement.style.top = "51%";
+    binghamtonTimer.innerHTML = "ACCEPTED";
+
+    rensselaerTimer.parentElement.classList.add("accepted");
+    rensselaerTimer.parentElement.style.top = "64%";
+    rensselaerTimer.innerHTML = "ACCEPTED";
+
+    colgateTimer.parentElement.classList.add("rejected");
+    colgateTimer.innerHTML = "REJECTED";
 }
 
 // update all of the labels when the site is opened

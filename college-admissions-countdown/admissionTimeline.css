@@ -33,7 +33,7 @@ h4 {
     font-weight: bold;
 
     color: white;
-    background-color: rgb(130, 16, 25);
+    background-color: rgb(80, 53, 231);
 
 }
 
@@ -42,7 +42,7 @@ body {
     background-image: url("images/siteBackground.jpg");
     background-size: 50%;
     background-attachment: fixed;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 #timersDiv {
@@ -52,7 +52,7 @@ body {
 }
 
 #header {
-    background-color: rgb(130, 16, 25);
+    background-color: rgb(80, 53, 231);
     color: white;
     padding: 2vw 0;
     width: 100%;
@@ -66,15 +66,15 @@ body {
     margin-bottom: 5vw;
     margin-top: 5vw;
 
-    border-color: rgb(216, 176, 101);
-    box-shadow: 0.4vw 0.4vw rgb(255, 236, 209);
+    border-color: rgb(80, 53, 231);
+    box-shadow: 0.4vw 0.4vw rgb(156, 146, 211);
 }
 
 #topCollegeDiv h1 {
     font-weight: 900;
     font-size: 5vw;
 
-    color: rgb(130, 16, 25);
+    color: rgb(80, 53, 231);
 }
 
 .collegeTimerDiv {
@@ -103,6 +103,31 @@ a {
     border-radius: 0 1vw 1vw 0;
 }
 
+.rejected {
+    position: absolute;
+    right: 0.75vw;
+    top: 25%;
+    width: 20%;
+    padding: 1vh 0;
+    border-radius: 1vw 0 0 1vw;
+    box-shadow: -0.4vw 0.4vw rgb(237, 237, 237);
+}
+
+.accepted:hover, .rejected:hover {
+    animation: 0.2s stretchBar;
+    animation-fill-mode: forwards;
+}
+
+@keyframes stretchBar {
+    from {
+        width: 20%;
+    }
+
+    to {
+        width: 22%;
+    }
+}
+
 a > .collegeTimerDiv:hover {
     filter: brightness(.95);
 }
@@ -112,7 +137,12 @@ a > .collegeTimerDiv:hover {
     font-size: 1.5vw;
 }
 
-.accepted > h1 {
+.rejected > h2 {
+    color: red;
+    font-size: 1.5vw;
+}
+
+.accepted > h1, .rejected > h1 {
     font-size: 2vw;
 }
 
