@@ -22,10 +22,15 @@ h1, h2, h3, a {
 #header {
     padding: 5%;
     flex-direction: column;
+    min-height: 35vh;
+    box-sizing: border-box;
 }
 
 #footer {
     padding: 1%;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 5vh;
 }
 
 #header, #footer {
@@ -48,7 +53,7 @@ h1, h2, h3, a {
 }
 
 #footer h1 {
-    font-size: 1em;
+    font-size: clamp(0.8em, 1.2vw, 1.5em);
 }
 
 #header h1, #footer h1 {
@@ -61,19 +66,30 @@ h1, h2, h3, a {
 #items {
     padding: 3%;
     display: flex;
-    width: 100%;
+    height: 60vh;
     box-sizing: border-box;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2%;
 }
 
 .card {
     width: 30%;
-    margin: 2%;
+    flex: 1 1 30%;
+    max-width: 30%;
+    height: 100%;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 5px 5px 10px 1px #aaa;
+    box-sizing: border-box;
     text-decoration: none;
     color: black;
     background-color: #fff;
+
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
 }
 
 .card img {
@@ -84,6 +100,7 @@ h1, h2, h3, a {
 .card h1 {
     text-align: left;
     margin: 5%;
+    font-size: 2vw;
 }
 
 .card:hover {
